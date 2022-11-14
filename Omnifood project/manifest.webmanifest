@@ -1,0 +1,14 @@
+{
+    "icons": [
+        {
+            "src": "./img/andeoid-icon.ico",
+            "type": "image/ico",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./img/andeoid-icon-512.ico",
+            "type": "image/ico",
+            "sizes": "512x512"
+        }
+    ]
+}

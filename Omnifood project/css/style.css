@@ -1,0 +1,789 @@
+/* ___________________ */
+/* HEADER */
+/* ___________________ */
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--back-ground-color);
+    /* Because header will be sticky */
+    height: 9.6rem;
+    padding: 0 8.6rem;
+}
+
+.Logo {
+    height: 2.2rem;
+}
+
+.Header-NavList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+}
+
+.Header-NavLink:link,
+.Header-NavLink:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    transition: all 250ms;
+}
+
+.Header-NavLink:hover {
+    color: var(--hover-orange-color);
+}
+
+.Header-NavLink.Header-Cta:link,
+.Header-NavLink.Header-Cta:visited {
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.Header-NavLink.Header-Cta:hover {
+    background-color: var(--hover-orange-color);
+}
+
+.Header-MobileNav {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+}
+
+.Header-MobileNavIcon {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: var(--heading-color);
+}
+
+.Header-MobileNavIcon[name='close-outline'] {
+    display: none;
+}
+
+.Sticky .Header {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.887);
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+/* ___________________ */
+/* HERO SECTION */
+/* ___________________ */
+
+.HeroSection {
+    background-color: var(--back-ground-color);
+    padding: 4.8rem 3.2rem 9.6rem 3.2rem;
+}
+
+.Sticky .HeroSection {
+    margin-top: 9.6rem;
+}
+
+.HeroSection-Container {
+    max-width: 130rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9.6rem;
+}
+
+.Heading {
+    font-weight: 700;
+    letter-spacing: -0.15rem;
+    color: var(--heading-color);
+}
+
+.HeroSection-Header {
+    font-size: 5.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.HeroSection-Description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 8.6rem;
+}
+
+.HeroSection-Img {
+    width: 100%;
+}
+
+.Button,
+.Button:link,
+.Button:visited {
+    background-color: #fff;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    transition: all 250ms;
+}
+
+.Button_main:link,
+.Button_main:visited {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+}
+
+.Button:hover {
+    background-color: var(--back-ground-color);
+    /* Box shadow is using as border here because border create unnecesary spacing around button */
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.Button_main:hover {
+    background-color: var(--hover-orange-color);
+    box-shadow: none;
+}
+
+.HeroSection-Button {
+    margin-right: 1.6rem;
+}
+
+.HeroSection-DeliveredMeals {
+    margin-top: 8rem;
+}
+
+.DeliveredMeals {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.DeliveredMeals-Photos {
+    display: flex;
+}
+
+.DeliveredMeals-Photo {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    border: solid 0.3rem var(--back-ground-color);
+    margin-right: -1.6rem;
+}
+
+.DeliveredMeals-Photo:last-child {
+    margin: 0;
+}
+
+.DeliveredMeals-Text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.DeliveredMeals-Text span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ___________________ */
+/* FEATURED IN SECTION */
+/* ___________________ */
+
+.FeaturedSection {
+    padding: 4.8rem 0 3.2rem;
+}
+
+.FeaturedSection-Heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888;
+}
+
+.FeaturedSection-Logos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.FeaturedSection-Logo {
+    height: 3.2rem;
+    filter: brightness(0);
+    opacity: 50%;
+}
+
+/* ___________________ */
+/* HOW IT WORKS SECTION */
+/* ___________________ */
+
+.HowItWorksSection {
+    padding: 9.6rem 0;
+}
+
+.HowItWorksSection-FlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    align-items: center;
+}
+
+.Step {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 9.6rem;
+}
+
+.Step-Number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+
+    margin-bottom: 1.2rem;
+}
+
+.TertiaryHeader {
+    font-size: 3rem;
+    line-height: 1.2;
+
+    margin-bottom: 3.2rem;
+}
+
+.Step-Description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.Step-ImgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.Step-ImgBox::before,
+.Step-ImgBox::after {
+    display: block;
+    content: "";
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Step-ImgBox::before {
+    width: 60%;
+    padding-bottom: 60%;
+    background-color: var(--back-ground-color);
+    z-index: -2;
+}
+
+.Step-ImgBox::after {
+    width: 45%;
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    z-index: -1;
+}
+
+.Step-Img {
+    width: 35%;
+}
+
+/* ___________________ */
+/* MEALS SECTION */
+/* ___________________ */
+
+.MealsSection {
+    padding: 9.6rem 0;
+}
+
+.MealsSection-GridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 4.8rem;
+}
+
+.Meal {
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+
+    transition: all 400ms;
+}
+
+.Meal:hover {
+    transform: translateY(-2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.Meal-Img {
+    width: 100%;
+}
+
+.Meal-Content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.Meal-Tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 0.4rem;
+}
+
+.Tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    border-radius: 100rem;
+}
+
+.Tag_vegetarian {
+    background-color: #51cf66;
+}
+
+.Tag_vegan {
+    background-color: #94d82d;
+}
+
+.Tag_paleo {
+    background-color: #ffd43b;
+}
+
+.Meal-Title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 3.2rem;
+}
+
+.Meal-Atributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Meal-Atribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.Meal-Icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: var(--primary-color);
+}
+
+.MealsSection-AllRecipes {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.Link:link,
+.Link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: solid 1px currentColor;
+    padding-bottom: 2px;
+
+    transition: all 250ms;
+}
+
+.Link:hover {
+    color: var(--hover-orange-color);
+    border-bottom: solid 1px transparent;
+}
+
+/* ___________________ */
+/* TESTIMONIALS SECTION */
+/* ___________________ */
+
+.TestimonialsSection {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    align-items: center;
+
+    background-color: var(--back-ground-color);
+}
+
+/* ___________________ */
+/* TESTIMONIALS */
+/* ___________________ */
+
+.Testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: flex-start;
+    gap: 4.8rem 9.6rem;
+
+
+    padding: 9.6rem;
+}
+
+.Testimonials-Container {
+    grid-column: 1/-1;
+    margin-bottom: -4.8rem;
+}
+
+.Testimonial-Img {
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+}
+
+.Testimonial-Text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+}
+
+.Testimonial-Author {
+    font-size: 1.6rem;
+    color: #6F6F6F;
+}
+
+/* ___________________ */
+/* GALLERY */
+/* ___________________ */
+
+.Gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    gap: 1.6rem;
+
+    padding: 1.6rem;
+}
+
+.Gallery-Item {
+    overflow: hidden;
+}
+
+.Gallery-ItemImg {
+    display: block;
+    width: 100%;
+
+    transition: all 250ms;
+}
+
+.Gallery-ItemImg:hover {
+    transform: scale(1.1);
+}
+
+/* ___________________ */
+/* PRICING SECTION */
+/* ___________________ */
+.PricingSection {
+    padding: 9.6rem 0;
+}
+
+.PricingSection-FirstPlan {
+    justify-self: end;
+}
+
+.PricingSection-GridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 4.8rem;
+}
+
+/* ___________________ */
+/* PLAN */
+/* ___________________ */
+
+.Plan {
+    border-radius: 11px;
+    padding: 4.8rem;
+    width: 75%;
+    border: solid 2px var(--back-ground-color);
+}
+
+.Plan_main {
+    background-color: var(--back-ground-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.Plan_main::after {
+    position: absolute;
+    top: 5%;
+    right: -9%;
+
+    transform: rotate(45deg);
+
+    content: "Best value";
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: #333;
+    padding: 0.8rem 4rem;
+}
+
+.Plan-Header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+
+}
+
+.Plan-Name {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.75;
+    margin-bottom: 3.2rem;
+}
+
+.Plan-Price {
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 1.6rem;
+}
+
+.Plan-Price span {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: .8rem;
+}
+
+.Plan-Text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #6F6F6F;
+}
+
+.Plan-Button {
+    margin-top: 4.8rem;
+    text-align: center;
+}
+
+.Plan-Details {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 9.6rem;
+}
+
+.Features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9.6rem;
+}
+
+.Feature-Icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-bottom: 3.2rem;
+    color: var(--primary-color);
+    background-color: var(--back-ground-color);
+    padding: 1.6rem;
+    border-radius: 50%;
+}
+
+.Feature-Title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.Feature-Text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/* ___________________ */
+/* CTA SECTION */
+/* ___________________ */
+
+.CTASection {
+    margin-bottom: 12.8rem;
+}
+
+.CTASection-GridContainer {
+    grid-template-columns: 2fr 1fr;
+    background-image: linear-gradient(to right bottom, var(--second-gradient-color), var(--primary-color));
+    border-radius: 1.1rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.CTASection-TextBox {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: #45260a;
+}
+
+.CTASection-TextBox .SecondaryHeader {
+    color: inherit;
+    margin-bottom: 3.2rem;
+}
+
+.CTASection-Text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+}
+
+.CTASection-Form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.CTASection-Form * {
+    transition: all 250ms;
+}
+
+.CTASection-Form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.CTASection-Form input,
+.CTASection-Form select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: var(--back-ground-color);
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.CTASection-Form input::placeholder {
+    color: #aaa;
+}
+
+.CTASection-Button {
+    background-color: #45260a;
+    color: var(--back-ground-color);
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.CTASection-Button:hover {
+    background-color: #fff;
+    color: var(--primary-text-color);
+}
+
+.CTASection-Form *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.CTASection-ImgBox {
+    background-image: linear-gradient(to right bottom, var(--img-gradient-color), var(--img-gradient-color)), url("../img/eating.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ___________________ */
+/* FOOTER SECTION */
+/* ___________________ */
+
+.FooterSection {
+    padding: 12.8rem 0;
+    border-top: 2px solid #eee;
+}
+
+.FooterSection-GridContainer {
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+    column-gap: 1.2rem;
+}
+
+.FooterSection-LogoColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterSection-Logo {
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+.SocialLinks {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.FooterLink-Icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.Copyright {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--primary-text-color);
+    margin-top: auto;
+}
+
+.FooterHeading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    color: var(--heading-color);
+}
+
+.Contacts {
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.Contacts-Adress {
+    margin-bottom: 2.4rem;
+}
+
+.FooterNavigation {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.FooterLink:link,
+.FooterLink:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--primary-text-color);
+
+    transition: all 250ms;
+}
+
+.FooterLink:hover {
+    color: var(--heading-color);
+}

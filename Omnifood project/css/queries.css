@@ -1,0 +1,267 @@
+/* rem and em dont depend on html fsz in media queries!
+Instead, 1rem = 1em = 16px */
+
+/* Bellow 1361px (smaller desktops) */
+
+@media (max-width: 85em) {
+    .HeroSection-Container {
+        max-width: 120rem;
+    }
+
+    .Gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* bellow 1200px (landscape tablets) */
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .Header {
+        padding: 0 3.2rem;
+    }
+
+    .Header-NavList {
+        gap: 3.2rem;
+    }
+
+    .HeroSection-Header {
+        font-size: 4.4rem;
+    }
+
+    .HeroSection-Container {
+        gap: 4.8rem;
+    }
+
+    .Grid {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
+    }
+
+    .Step {
+        gap: 4.8rem;
+    }
+
+    .Testimonials {
+        padding: 9.6rem 3.2rem;
+    }
+}
+
+/* bellow 944px (tablets) */
+
+@media (max-width: 59em) {
+    html {
+        font-size: 50%;
+    }
+
+    .NavOpen .Header-Nav {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .Header {
+        position: relative;
+    }
+
+    .Header-Nav {
+        background-color: rgba(255, 255, 255, 0.887);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 250ms;
+
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .Header-NavList {
+        flex-direction: column;
+    }
+
+    .Header-NavLink:link,
+    .Header-NavLink:visited {
+        font-size: 3rem;
+    }
+
+    .Header-MobileNav {
+        display: block;
+        z-index: 10;
+    }
+
+    .NavOpen .Header-MobileNavIcon[name='close-outline'] {
+        display: block;
+    }
+
+    .NavOpen .Header-MobileNavIcon[name='menu-outline'] {
+        display: none;
+    }
+
+    .HeroSection-Container {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
+    }
+
+    .HeroSection-Description {
+        margin-bottom: 3.2rem;
+    }
+
+    .HeroSection-DeliveredMeals {
+        margin-top: 3.2rem;
+    }
+
+    .HeroSection-Text,
+    .HeroSection-ImgContainer {
+        text-align: center;
+    }
+
+    .HeroSection-Img {
+        width: 60%;
+    }
+
+    .FeaturedSection-Logo {
+        height: 2.4rem;
+    }
+
+    .DeliveredMeals {
+        justify-content: center;
+    }
+
+    .Step-Number {
+        font-size: 7.4rem;
+    }
+
+    .Meal-Content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    }
+
+    .TestimonialsSection {
+        grid-template-columns: 1fr;
+    }
+
+    .Gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .CTASection-GridContainer {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .CTASection-Form {
+        grid-template-columns: 1fr;
+    }
+
+    .CTASection-Button {
+        margin-top: 1.2rem;
+    }
+}
+
+/* bellow 704px (smaller tablets) */
+
+@media (max-width: 44em) {
+
+    .SecondaryHeader {
+        margin-bottom: 4.8rem;
+    }
+
+    .MealsSection-GridContainer,
+    .Features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .MealsSection-Diets {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .Plan {
+        width: 100%;
+    }
+
+    .FooterSection-GridContainer {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .FooterSection-LogoColumn,
+    .FooterSection-AddressColumn {
+        grid-column: span 3;
+    }
+
+    .FooterSection-NavigationColumn {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+
+    .FooterSection-LogoColumn .Logo {
+        margin-bottom: 2.4rem;
+    }
+}
+
+/* bellow 544px (phones) */
+
+@media (max-width: 34em) {
+    .Grid {
+        row-gap: 4.8rem;
+    }
+
+    .HeroSection-Container {
+        padding: 0;
+    }
+
+    .Button,
+    .Button:link,
+    .Button:visited {
+        padding: 2.4rem 1.6rem;
+    }
+
+    .HeroSection-Img {
+        width: 80%;
+    }
+
+    .FeaturedSection-Logo {
+        height: 1.2rem;
+    }
+
+    .MealsSection-GridContainer,
+    .Step,
+    .PricingSection-GridContainer,
+    .Features,
+    .CTASection-GridContainer,
+    .FooterSection-GridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .Step:nth-child(even) .Step-TextBox {
+        grid-row: 1;
+        gap: 4.8rem;
+    }
+
+    .Testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .Gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .CTASection-TextBox {
+        padding: 3.2rem;
+    }
+
+    .CTASection-ImgBox {
+        display: none;
+    }
+}
